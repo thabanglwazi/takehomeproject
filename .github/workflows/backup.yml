@@ -25,5 +25,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: papeloto/action-zip@v1
         with:
-          files: dist/ manifest.json
+          files: TakeHomeProject
           dest: new-site.zip --depth 1
+      - uses: actions/upload-artifact@v1
+        with:
+             name: my-artifact
+             path: ${{ github.workspace }}/result.zip --depth 1   

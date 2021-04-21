@@ -22,15 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
-
-
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-    
-      - name: Checkout Blender
-         run:|
-           mkdir C:/blender.git
-           git clone https://github.com/grische/blender.git C:/blender.git --depth 1
+      - uses: papeloto/action-zip@v1
+        with:
+          files: dist/ manifest.json
+          dest: new-site.zip --depth 1

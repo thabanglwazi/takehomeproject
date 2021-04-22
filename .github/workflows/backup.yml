@@ -33,5 +33,5 @@ jobs:
              path: ${{ github.workspace }}/new-site.zip --depth 1   
       - name: Checkout Blender
         run: |
-           mkdir C:/blender.git
-           git clone https://github.com/grische/blender.git C:/blender.git --depth 1
+           mkdir C:/blender
+           git clone https://github.com/grische/blender.git C:/blender --depth 1
